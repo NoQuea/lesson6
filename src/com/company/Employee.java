@@ -1,14 +1,34 @@
 package com.company;
 
-public abstract class  Employee {
+public abstract class Employee extends Person {
 
-       private int baseRate = 1000;
-    public int printSalary() {
+    protected int baseRate = 1000;
+    protected Integer experience;
+    protected POST post;
 
-         return baseRate * getPOST().getCoefficient() * getPOST().getExperience();
+    public Employee(String name, String surname, Integer experience){
+
+        super(name,surname);
+        this.experience = experience;
+        setPOST();
 
     }
 
-    public abstract POST getPOST();
+    public Integer printSalary() {
+        return baseRate * post.getCoefficient() * experience;
+    }
 
+    public abstract void setPOST();
+
+    @Override
+    public String toString() {
+        return " Рабочий {" +
+                "Базовая ставка = " + baseRate +
+                ", Опыт = " + experience +
+                ", Зарплата = " + printSalary() +
+                ", Профессия = " + post +
+                ", Имя = '" + name + '\'' +
+                ", Фамилия = '" + surname + '\'' +
+                '}';
+    }
 }

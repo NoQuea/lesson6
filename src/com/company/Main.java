@@ -3,17 +3,22 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        person.setName("Pavel");
-        person.setSurname("Vorobyev");
-        person.FullName();
-        Employee worker = new Worker();
-        System.out.println(POST.WORKER.getName()+" Зарплата рабочего состовляеет "+worker.printSalary()+"$");
-        Employee secretary = new Secretary();
-        System.out.println(POST.SECRETARY.getName()+" Зарплата секреторя состовляеет "+secretary.printSalary()+"$");
-        Employee rider = new Rider();
-        System.out.println(POST.RIDER.getName()+" Зарплата водителя состовляеет "+rider.printSalary()+"$");
-        Employee director = new Director();
-        System.out.println(POST.DIRECTOR.getName()+" Зарплата директора состовляеет "+director.printSalary()+"$");
+
+        Employee worker1 = new Worker("Tim","Reik",1);
+        Employee worker2 = new Worker("Tom","Redins",3);
+        Employee worker3 = new Worker("Kim","Jointer",2);
+
+        Employee director1 = new Director("Bob","Nerin",12);
+        Employee director2 = new Director("Gena","Gorin",9);
+
+        ((Director)director1).addWorker(worker1);
+        ((Director)director1).addWorker(worker2);
+        ((Director)director2).addWorker(worker3);
+
+        ((Director)director1).addWorker(director2);
+
+        System.out.println(director1);
+
+
     }
 }
