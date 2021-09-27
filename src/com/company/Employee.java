@@ -31,4 +31,6 @@ public abstract class Employee extends Person {
                 ", Фамилия = '" + surname + '\'' +
                 '}';
     }
+
+    public abstract void findName();
 }

@@ -39,6 +39,11 @@ public class Director extends Employee{
     }
 
     @Override
+    public void findName() {
+
+    }
+
+    @Override
     public Integer printSalary() {
         if (employees == null) {
             return super.printSalary();

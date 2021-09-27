@@ -17,8 +17,8 @@ public class Main {
 
         ((Director)director1).addWorker(director2);
 
+
         System.out.println(director1);
-
-
+        director2.findName((Director) director2, director2.name);
     }
 }

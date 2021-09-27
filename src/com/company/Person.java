@@ -1,6 +1,6 @@
 package com.company;
 
-public class Person{
+public class Person implements findEmployeeName{
 
     protected String name ;
     protected String surname ;
@@ -17,5 +17,11 @@ public class Person{
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
+    }
+
+    @Override
+    public void findName(Director director, String name) {
+        System.out.println("Имя сотрудика " + this.name);
+
     }
 }

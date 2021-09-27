@@ -10,4 +10,9 @@ public class Worker extends Employee {
     public void setPOST() {
         this.post = POST.WORKER;
     }
+
+    @Override
+    public void findName() {
+
+    }
 }
